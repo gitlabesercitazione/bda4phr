@@ -1,0 +1,35 @@
+
+label {
+    margin-bottom: 20px;
+}
+input{
+    margin: 10px 0px;
+
+
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+
+
+.enter {
+    width: 302px;
+    background: lightseagreen;
+    color: white;
+}
+
+.container{
+    margin: 200px 0px;
+}
+
+.btn-twitter{
+    background: #1DA1F2;
+}

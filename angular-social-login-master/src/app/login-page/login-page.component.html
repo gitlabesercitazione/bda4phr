@@ -1,0 +1,37 @@
+<div class="container"
+fxLayout="row"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+>  
+<mat-card fxFlex="60" fxFlex.sm="90"  fxLayoutGap="30px" fxLayout.lt-sm="column" fxLayoutAlign="center center"> 
+    <div class="item item-1" fxFlex="40"   fxLayout="column" fxLayoutGap="10px">
+        <button  mat-raised-button  (click)="socialSignIn('facebook')" class=" btn-facebook">
+            <span class="fa fa-facebook"></span> Sign in with Facebook
+        </button>
+        <button  mat-raised-button  (click)="socialSignIn('google')" class=" btn-google">
+            <span class="fa fa-google"></span>  Sign in with Google</button>
+            <button  mat-raised-button  (click)="socialSignIn('twitter')" class="btn-twitter">
+                <span class="fa fa-twitter"></span>  Sign in with Twitter</button> 
+            </div>
+            <div  fxFlex="50" >
+                <form class="example-form">
+                    <legend><b>Registrati con email</b></legend> 
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Username"type="text"   />
+                      
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput type="password" placeholder="Password"
+                        type="password"  class="form-control"  />
+                    </mat-form-field>
+                    <div>
+                        <button type="submit"  mat-raised-button color="primary" value="Submit">Entra</button>
+                        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    </div>
+                </form>
+                
+            </div>
+        </mat-card> 
+    </div>
+    
+    
