@@ -14,7 +14,7 @@ fxLayoutAlign="center"
                 <span class="fa fa-twitter"></span>  Sign in with Twitter</button> 
             </div>
             <div  fxFlex="50" >
-                <form class="example-form">
+                <form class="form" (ngSubmit)="f.form.valid && onSubmit()">
                     <legend><b>Registrati con email</b></legend> 
                     <mat-form-field class="example-full-width">
                         <input matInput placeholder="Username"type="text"   />

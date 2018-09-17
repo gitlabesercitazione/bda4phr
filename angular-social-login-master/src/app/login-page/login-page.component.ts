@@ -32,6 +32,11 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit() {}
 
+  model : any = {};
+  onSubmit() {
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
+  }
+
   public socialSignIn(socialPlatform: string) {
     let socialPlatformProvider;
     if (socialPlatform === 'facebook') {
