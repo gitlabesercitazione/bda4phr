@@ -19,14 +19,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './directives/alert.component';
+import { AlertService } from './services';
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: '', component: LoginPageComponent }
   ];
+  import { AuthGuard } from './guards';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -47,15 +49,17 @@ export function getAuthServiceConfigs() {
   declarations: [
     AppComponent,
     LoginPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     SocialLoginModule, HttpModule, RouterModule.forRoot(routes),
     BrowserAnimationsModule,MatButtonModule, MatCheckboxModule,MatInputModule,FlexLayoutModule,FormsModule,
-    MatCardModule
+    MatCardModule,HttpClientModule,ReactiveFormsModule
   ],
-  providers: [ AuthAPIService, UserService, {
+  providers: [
+    AuthAPIService, UserService, AlertService,  AuthGuard,{
     provide: AuthServiceConfig,
     useFactory: getAuthServiceConfigs
   }],
